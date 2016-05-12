@@ -22,6 +22,8 @@
 \newcommand{\defn}{\ensuremath{:  =}}
 
 \def\SW{\mathsf{SWAP}}
+\DeclareMathOperator*{\argmaxB}{argmax}
+\newcommand{\argmaxD}{\arg\!\max}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Beamer-Poster Settings
@@ -176,8 +178,8 @@
 
 \begin{itemize}
     \item $P(\theta, \phi | clicks) \propto P(clicks | \theta, \phi) * P(\theta,\phi)$\\
-    \item $P(\theta, \phi | clicks) \propto P(clicks | \theta) * P(\theta | \phi)
-    * P(\theta)$\\
+    \item $P(\theta, \phi | clicks) \propto P(clicks | \theta) * P(\theta | \phi) * P(\phi)$\\
+    \item $Objective_{MLE} = \argmaxD_{\theta,\phi} NLL(P(clicks | \theta) * P(\theta | \phi) * P(\phi))$, solved using Gradient Descent (AdaGrad and LBFGS)\\
    \item  $P(click = k | \theta_1, ..., \theta_n) = \frac{exp(\theta_k)}{exp(\theta_1) + ... + exp(\theta_n)}$ \\
    \item  $P(\theta_i | \phi_j) \sim \mathcal{N}(\phi_j, \sigma^2)$ \\
    %\item  &P(\theta_i | \phi_j) = \frac{1}{\sqrt{2\pi\sigma^2}} exp(\frac{-|\theta_i - \phi_j|^2}{2\sigma^2}) \\
