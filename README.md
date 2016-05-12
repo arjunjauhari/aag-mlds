@@ -1,15 +1,15 @@
 # Master of Engineering project at Cornell.
 ## Title: Automatic Assessment Generation via Machine Learning using StackOverflow Dataset.
 
+### Poster
+![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/AJPoster.png "Poster")
+
 ### Dataset
 ![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/stackexchange.png "Dataset")
 
 ### Model Structure
 Scripts are in ver2 folder. Call "python ver2/main.py -h" for more help.
 ![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/dotGraph/fileTreedetail.png "ModelStructure")
-
-### Poster
-![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/AJPoster.png "Poster")
 
 ### Project Notes
 [Click Here!!](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/ProjectNotes.pdf)
