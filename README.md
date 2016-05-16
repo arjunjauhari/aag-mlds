@@ -1,6 +1,9 @@
 # Master of Engineering project at Cornell.
 ## Title: Automatic Assessment Generation via Machine Learning using StackOverflow Dataset.
 
+### Abstract
+This project is part of Machine Learning and Education Research aimed to build an automatic system for generation of test/assessment. The project uses data dumps from 130+ stack-exchange websites to learn interesting hidden variables  like difficulty of question, quality of answers, ability of users in a particular specialization. The goal is to use these learned parameters to build applications like generating an assessment, tracking the learning curve of a student, ranking all the users. Data on these 130+ stack-exchange websites is huge, therefore a careful review is required to understand how data is arranged, what different attributes mean, so that it can be processed to extract out the information of interest. Various approaches like Linear system of equations, Naive Bayes, Graphical models have been explored and it is found that Graphical models give best results.
+
 ### Poster
 ![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/AJPoster.png "Poster")
 
