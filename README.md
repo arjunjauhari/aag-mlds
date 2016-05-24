@@ -17,6 +17,9 @@ Even for this simple looking model the implementation was very complex as the nu
 
 The planning and implementation of the project went well and smoothly. We were able to train the model and do predictions from the learned model with an accuracy of order ~50% which was 20% better than random guessing. This accuracy is quite good as this problem is a varying multi-class classification problem.
 
+### Detailed Project Report
+[Click Here!!](https://github.com/arjunjauhari/meng-project/blob/master/documentation/FinalReport/report/MEngFinalReport-ArjunJauhari.pdf)
+
 ### Poster
 ![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/AJPoster.png "Poster")
 
@@ -26,9 +29,6 @@ The planning and implementation of the project went well and smoothly. We were a
 ### Model Structure
 Scripts are in ver2 folder. Call "python ver2/main.py -h" for more help.
 ![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/dotGraph/fileTreedetail.png "ModelStructure")
-
-### Project Notes
-[Click Here!!](https://github.com/arjunjauhari/meng-project/blob/master/documentation/AJPoster/ProjectNotes.pdf)
 
 ### Description of Other scripts present in ver2 folder
 
