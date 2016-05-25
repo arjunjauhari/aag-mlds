@@ -15,7 +15,7 @@ For the learning task, we explored couple of models but spent most of the time o
 
 Even for this simple looking model the implementation was very complex as the number of parameters in the model are equal to number of answers + number of users, which for StackOverflow are in the range of ~10 million even after filtering. This poses both memory and time constraint. Therefore, we first chose dataset like Maths, Physics and Chemistry where the number of parameters were in range of thousands. We used Maximum Likelihood Estimation to learn the most likely parameters given the observed data. To solve this optimization problem we used gradient descent. Specifically, we used L-BFGS for smaller datasets and for larger dataset we used AdaGrad which is an adaptive stochastic gradient descent method.
 
-The planning and implementation of the project went well and smoothly. We were able to train the model and do predictions from the learned model with an accuracy of order ~50% which was 20% better than random guessing. This accuracy is quite good as this problem is a varying multi-class classification problem.
+The planning and implementation of the project went well and smoothly. We were able to train the model and do predictions from the learned model with an accuracy of order ~50% which is 20% better than random guessing. This accuracy is quite good as this problem is a varying multi-class classification problem.
 
 ### Detailed Project Report
 [Click Here!!](https://github.com/arjunjauhari/meng-project/blob/master/documentation/FinalReport/report/MEngFinalReport-ArjunJauhari.pdf)
