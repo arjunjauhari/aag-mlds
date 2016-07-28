@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import os
 
 # Run here
 parser = argparse.ArgumentParser(description='Main script to run the full model. From compression to optimization. Need to call from datasets/<xyz>/ directory')
@@ -13,16 +14,17 @@ parser.add_argument('-k','--kfold', help='Number of folds to create and run. k=1
 parser.add_argument('-r','--run', help='Run the optimization and dump solution.', required=False,action='store_true')
 args = parser.parse_args()
 
+print "CWD: " + os.path.dirname(os.path.realpath(__file__))
 
 if args.compress or args.all:
-    print "---RUNNING breakFiles_compress.py---"
-    subprocess.call("python ../../ver2/breakFiles_compress.py -u -p -v",shell=True)
+    print "\n---RUNNING breakFiles_compress.py---"
+    subprocess.call("python ../../mainCode/breakFiles_compress.py -u -p -v",shell=True)
 if args.filter or args.all:
     print "\n---RUNNING filterPosts.py---"
-    subprocess.call("python ../../ver2/filterPosts.py -p %d -u %d" % (args.minpost,args.minuser),shell=True)
+    subprocess.call("python ../../mainCode/filterPosts.py -p %d -u %d" % (args.minpost,args.minuser),shell=True)
 if args.structure or args.all:
     print "\n---RUNNING structureBigData.py---"
-    subprocess.call("python ../../ver2/structureBigData.py -k %d" % (args.kfold),shell=True)
+    subprocess.call("python ../../mainCode/structureBigData.py -k %d" % (args.kfold),shell=True)
 if args.run or args.all:
     print "\n---RUNNING runBigData.py---"
-    subprocess.call("python ../../ver2/runBigData.py -l -k %d" % (args.kfold),shell=True)
+    subprocess.call("python ../../mainCode/runBigData.py -l -k %d" % (args.kfold),shell=True)

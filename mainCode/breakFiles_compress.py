@@ -91,28 +91,29 @@ def compressVotes():
     # Remove the temporary files
 
 # Run here
-parser = argparse.ArgumentParser(description='Script to break big data files into small and extract the important attributes and put in to final-*.csv file. Need to call from datasets/<xyz>/ directory')
-parser.add_argument('-u','--user', help='flag to break and process Users.xml file', required=False,action='store_true')
-parser.add_argument('-p','--post', help='flag to break and process Posts.xml file', required=False,action='store_true')
-parser.add_argument('-v','--vote', help='flag to break and process Votes.xml file', required=False,action='store_true')
-args = parser.parse_args()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Script to break big data files into small and extract the important attributes and put in to final-*.csv file. Need to call from datasets/<xyz>/ directory')
+    parser.add_argument('-u','--user', help='flag to break and process Users.xml file', required=False,action='store_true')
+    parser.add_argument('-p','--post', help='flag to break and process Posts.xml file', required=False,action='store_true')
+    parser.add_argument('-v','--vote', help='flag to break and process Votes.xml file', required=False,action='store_true')
+    args = parser.parse_args()
 
-## show values ##
-#print ("minPosts: %s" % args.userupvotes )
-#print ("minUsers: %s" % args.userpost )
+    ## show values ##
+    #print ("minPosts: %s" % args.userupvotes )
+    #print ("minUsers: %s" % args.userpost )
 
-# Make directory if not present
-d = "breakFiles"
-if args.user or args.post or args.vote:
-    if not os.path.exists(d):
-        os.makedirs(d)
+    # Make directory if not present
+    d = "breakFiles"
+    if args.user or args.post or args.vote:
+        if not os.path.exists(d):
+            os.makedirs(d)
 
-if args.user:
-    compressUsers()
-if args.post:
-    compressPosts()
-if args.vote:
-    compressVotes()
+    if args.user:
+        compressUsers()
+    if args.post:
+        compressPosts()
+    if args.vote:
+        compressVotes()
 
-if args.user or args.post or args.vote:
-    subprocess.call("rm FF*",shell=True)
+    if args.user or args.post or args.vote:
+        subprocess.call("rm FF*",shell=True)
