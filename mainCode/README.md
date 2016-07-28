@@ -2,7 +2,7 @@
 Call "python main.py -h" for more help.
 ![alt text](https://github.com/arjunjauhari/meng-project/blob/master/documentation/dotGraph/fileTreedetail.png "ModelStructure")
 
-    check_grad.py      ==>>        script to check the gradient
+    check_grad.py       ==>>        script to check the gradient
     preprocess.py       ==>>        Important script: preprocess the data and structure it into following form for each question-
                                     voteHist = [[0, [0, 1, 2, 3]], [0, [0, 1, 2, 3, 4]], [2, [0, 1, 2, 3]], [5, [0, 1, 2, 3, 4, 5]]]
     simulation.py       ==>>        Main script to solve for theta parameters(contains all the optimization functions)
